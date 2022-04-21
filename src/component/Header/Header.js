@@ -8,7 +8,6 @@ const Header = () => {
 
 
     return (
-        <div>
             <nav>         
                 <Link to='/home'>Home</Link>
                 <Link to='/about'>About</Link>
@@ -26,7 +25,6 @@ const Header = () => {
 
                 }
             </nav>
-        </div>
     );
 };
 

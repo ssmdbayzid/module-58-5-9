@@ -5,12 +5,12 @@ a{
 }
 a:hover{
     background-color: #ededed;
-    padding: 15px;
+    padding: 20px 15px;
     font-weight: 600;
 }
 nav{
     background-color: #8cd94d;
-    padding: 15px;
+    padding: 12px;
     text-align: center;
 
 }
