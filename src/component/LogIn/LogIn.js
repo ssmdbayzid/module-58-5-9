@@ -1,10 +1,18 @@
+import { getAuth } from 'firebase/auth';
 import React, { useState } from 'react';
+import app from '../../firebase.init';
 import useFirebase from '../../hooks/useFirebase';
+import { useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import './LogIn.css'
 
 const LogIn = () => {
 
-    const {signInWithGoogle, signInWithEmailAndPassword} = useFirebase();
+    const {signInWithEmailAndPassword} = useFirebase();
+
+    // Sign In with Google using Google
+
+    const auth = getAuth(app)
+    const [signInWithGoogle, error] = useSignInWithGoogle(auth)
 
     const [email, setEmail] = useState();
 
@@ -33,11 +41,12 @@ const LogIn = () => {
             <br />
             <input onBlur={handlePassword} type="password"  placeholder='your password' />
             <br />
+            <p>{error && error.message}</p>
             <button type='submit'> Log In</button>
             <br />
             <br />
         </form>
-        <button onClick={signInWithGoogle}>Google Sign In</button>
+        <button onClick={() => signInWithGoogle()}>Google Sign In</button>
         </div>
     );
 };
