@@ -14,3 +14,17 @@ nav{
     text-align: center;
 
 }
+.btn{
+    background-color: #6db82f;
+    padding: 5px 10px;
+    border-radius: 10px;
+    margin-left: 10px;
+    color: #fff;
+}
+.log-btn{
+    background-color: #6db82f;
+    padding: 5px 10px;
+    border-radius: 10px;
+    margin-left: 10px;
+    color: #fff;
+}
